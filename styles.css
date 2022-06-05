@@ -23,9 +23,10 @@ body{
     grid-template: 1fr 1.5fr / 2fr 1fr;
     padding: 15px 30px;
     gap: 30px;
+    background-color: rgb(40, 135, 73);
 }
 
-.header-name, .trending-content{
+.header-name{
     display: grid;
     grid-template-columns: 1fr 9fr;
     align-items: center;
@@ -68,7 +69,7 @@ input {
     height: 25px;
     padding: 10px;
     border: none;
-    background-color: #cbd5e1;
+    background-color: beige;
     box-shadow: 1px 1px #94a3b893;
 }
 
@@ -87,16 +88,15 @@ input {
 }
 
 .header-btns button{
-    background-color: rgb(47, 155, 255);
+    background-color: beige;
     border-radius: 20px;
     border: none;
     width: 100px;
     height: 30px;
-    color: whitesmoke;
 }
 
 .sidebar{
-    background-color: rgb(47, 155, 255);
+    background-color: rgb(49, 103, 68);
     color: white;
     padding: 30px;
     grid-row: 1/3;
@@ -107,7 +107,8 @@ input {
 .sidebar-content ul{
     list-style: none;
     display: grid;
-    gap: 20px;
+    gap: 15px;
+    margin-top: 15px;
 }
 
 .sidebar-header{
@@ -117,9 +118,8 @@ input {
     align-items: baseline;
 }
 
-.logo{
-    width: 50px;
-    height: 50px;
+svg, .sidebar, .header{
+    color: beige;
 }
 
 li {
@@ -131,18 +131,8 @@ li {
 .content{
     display: grid;
     grid-template: 1fr 1fr / 3fr 1fr;
-    background-color: #cbd5e1;
+    background-color: rgb(101, 175, 127);
     padding-top: 10px;
-}
-
-.announcement, .trending{
-    margin-right: 30px;
-    margin-left: 20px;
-}
-
-.projects, .announcement{
-    margin-top: 20px;
-    margin-bottom: 20px;
 }
 
 .projects{
@@ -154,6 +144,7 @@ li {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 20px;
+    height: 90%;
 }
 
 .card{
@@ -161,31 +152,44 @@ li {
         to right,
         orange 0%,
         orange 2%,
-        whitesmoke 2%,
-        whitesmoke 100%
+        beige 2%,
+        beige 100%
     );
-    display: flex;
-    flex-direction: column;
-    min-height: 21vh;
-    flex: 1 1 auto;
-    gap: 5px;
+    display: grid;
+    grid-template-rows: 1fr 3fr 1fr;
+}
+
+.projects .title{
+    font-size: 16px;
+}
+
+.project-content p ~ p{
+    font-size: 15px;
 }
 
 .card-btn{
     display: flex;
-    height: 60px;
     justify-content: flex-end;
     align-items: flex-end;
 }
 
 .card-btn button{
     border: none;
-    background-color: whitesmoke;
+    background-color: beige;
 }
 
 .card-btn img{
     width: 25px;
     height: 20px;
+}
+
+.projects, .announcement{
+    margin-top: 20px;
+}
+
+.announcement, .trending{
+    margin-right: 30px;
+    margin-left: 20px;
 }
 
 .announcement-content{
@@ -194,7 +198,6 @@ li {
     gap: 20px;
     min-height: fit-content;
     flex: 1 1 auto;
-    background-color: whitesmoke;
 }
 
 .card, .announcement-content, .trending-content{
@@ -208,29 +211,29 @@ li {
     margin-bottom: 5px;
 }
 
+.announcement-content div{
+    border-bottom: 1px solid grey;
+    padding-bottom: 15px;
+}
+
 h1{
     font-size: 20px;
-}
-
-.projects .title{
-    font-size: 16px;
-}
-
-.project-content p ~ p{
-    font-size: 15px;
 }
 
 .announcement, .trending{
     font-size: 12px;
 }
 
+.trending{
+    margin-top: 20px;
+}
+
 .trending-content{
-    display: grid;
-    grid-template: repeat(3,1fr) / 1fr 3fr;
+    display: flex;
+    flex-direction: column;
     gap: 20px;
-    min-height: fit-content;
     flex: 1 1 auto;
-    background-color: whitesmoke;
+    height: fit-content;
 }
 
 .trend{
@@ -250,4 +253,13 @@ h1{
 .projects .title, .announcement .title, .sidebar, .header-btns button, .header-text, .header-notifs p{
     font-weight: bold;
 }
+
+.project-name, .project-content p + p, .announcement-content p + p{
+    color: rgb(70, 70, 70);
+}
+
+.trending-content, .announcement-content{
+    background-color: beige;
+}
+ 
 

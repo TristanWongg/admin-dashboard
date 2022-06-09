@@ -23,7 +23,7 @@ body{
     grid-template: 1fr 1.5fr / 2fr 1fr;
     padding: 15px 30px;
     gap: 30px;
-    background-color: rgb(40, 135, 73);
+    background-color: #059669;
 }
 
 .header-name{
@@ -96,7 +96,7 @@ input {
 }
 
 .sidebar{
-    background-color: rgb(49, 103, 68);
+    background-color: #047857;
     color: white;
     padding: 30px;
     grid-row: 1/3;
@@ -131,7 +131,7 @@ li {
 .content{
     display: grid;
     grid-template: 1fr 1fr / 3fr 1fr;
-    background-color: rgb(101, 175, 127);
+    background-color: #10b981;
     padding-top: 10px;
 }
 
@@ -150,8 +150,8 @@ li {
 .card{
     background: linear-gradient(
         to right,
-        orange 0%,
-        orange 2%,
+        #047857 0%,
+        #047857 2%,
         beige 2%,
         beige 100%
     );

@@ -111,6 +111,15 @@ input {
     margin-top: 15px;
 }
 
+.sidebar-content > ul > li > p {
+    transform: scale(1);
+}
+
+.sidebar-content > ul > li > p:hover{
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
 .sidebar-header{
     display: flex;
     gap: 8px;
@@ -157,6 +166,7 @@ li {
     );
     display: grid;
     grid-template-rows: 1fr 3fr 1fr;
+    transform: scale(1);
 }
 
 .projects .title{
@@ -165,6 +175,10 @@ li {
 
 .project-content p ~ p{
     font-size: 15px;
+}
+
+.card:hover{
+    transform: scale(1.05);
 }
 
 .card-btn{
@@ -261,5 +275,7 @@ h1{
 .trending-content, .announcement-content{
     background-color: beige;
 }
- 
 
+button:hover{
+    cursor: pointer;
+}
